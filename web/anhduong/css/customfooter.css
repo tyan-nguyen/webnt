@@ -1,0 +1,207 @@
+/* custom footer */
+.main-footer {
+  padding: 85px 0 0 0;
+}
+.main-footer .widget:last-child {
+  padding-bottom: 0;
+}
+.custom-footer {
+	
+  font-family: "Roboto", Helvetica, Arial, Verdana, sans-serif;
+  background: url(bg3.jpg) no-repeat;
+
+  background-size: 100% 100%;
+  margin: -15px;
+  display: flex;
+  color: #ffffff;
+  font-size: 16px;
+  padding:80px 50px 150px 50px;
+  flex-direction: column;
+}
+.custom-footer p {
+  margin: 3px;
+}
+
+.custom-footer-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.custom-footer-logo > img {
+  /*width: 225px;*/
+  width: 350px;
+}
+
+.custom-footer-button {
+  width: 230px;
+  background-color: #ffffff;
+  height: 60px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  text-decoration: none;
+  border: none;
+  font-weight: 600;
+  margin-right: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 20px 10px;
+}
+
+.custom-footer-button:hover {
+  color: #ffffff;
+  background-color: #fdba2c;
+}
+.custom-footer > .custom-footer-address {
+  display: flex;
+  column-gap: 60px;
+}
+.custom-footer-address-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.custom-footer > .custom-footer-address > div > p > img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.custom-footer > .custom-footer-address > div > p {
+  display: flex;
+  align-items: start;
+}
+.custom-footer-social {
+  margin-top: 25px;
+}
+
+.custom-footer-social > a {
+  text-align:center;
+  text-decoration: none;
+  margin-right: 10px;
+  color: #ffffff;
+  font-size: 1.25rem;
+  border: 1px solid #ffffff;
+  transition: all 0.5s ease;
+  border-radius: 0;
+  line-height: 1.5em;
+  padding: 3px;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+}
+.custom-footer-social > a > i {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.custom-footer-social > a > i > svg {
+  width: 100%;
+  height: 100%;
+  fill: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.custom-footer-social > a:hover {
+  color: #ffffff;
+  background-color: #fdba2c;
+  border: 1px solid #fdba2c;
+}
+
+.custom-footer-social > a:hover > i > svg {
+  fill: #ffffff;
+}
+
+@media (min-width: 1200px) {
+  .main-footer > .container {
+    width: 100vw !important;
+    margin: 0;
+  }
+}
+
+@media (max-width: 786px) {
+  .custom-footer {
+    padding: 10px 20px 40px 40px;
+  }
+  .custom-footer > .custom-footer-address {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  .custom-footer > .custom-footer-address > div:last-child {
+    flex: 1;
+  }
+  .custom-footer-social {
+    text-align: center;
+  }
+  .custom-footer > .custom-footer-address > div:last-child {
+    text-align: center;
+  }
+  .custom-footer-button {
+    margin-right: 0px;
+    cursor: pointer;
+    
+  }
+  
+  .custom-footer-social > a:last-child {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-footer {
+    padding: 10px 30px 40px 30px;
+    font-size: 12px;
+  }
+  .custom-footer-logo {
+    margin-bottom: 10px;
+  }
+  .custom-footer-logo > img {
+    /*width: 130px;*/
+    width: 225px;
+  }
+  .custom-footer > .custom-footer-address {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  .custom-footer-address-title {
+    font-size: 16px;
+  }
+  .custom-footer > .custom-footer-address > div:last-child {
+    flex: 1;
+  }
+  .custom-footer-social {
+    text-align: center;
+  }
+
+  .custom-footer > .custom-footer-address > div > p > img {
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    margin-top: 4px;
+  }
+  .custom-footer > .custom-footer-address > div:last-child {
+    text-align: center;
+  }
+  .custom-footer-button {
+    width: 200px;
+    background-color: #ffffff;
+    height: 35px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    border: none;
+    font-weight: 600;
+    margin-right: 0px;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 10px 10px;
+  }
+  .custom-footer-social > a:last-child {
+    margin-right: 0px;
+  }
+  .custom-footer-social > a {
+    width: 30px;
+    height: 30px;
+  }
+}
