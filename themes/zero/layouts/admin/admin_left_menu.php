@@ -58,7 +58,7 @@ use app\modules\dashboard\models\Links;
           	</ul>
         </li>
         
-        
+        <!-- 
         <li class="treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span><?= Yii::t('app', 'Pages')?></span>
@@ -77,11 +77,11 @@ use app\modules\dashboard\models\Links;
            
           </ul>
         </li>
-        
+         -->
        
         
        
-          <?php if(User::hasRole('bientapvien')) { ?>
+          <?php /*if(User::hasRole('bientapvien')) { ?>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span><?= Yii::t('app', 'SETTINGS')?></span>
@@ -109,7 +109,7 @@ use app\modules\dashboard\models\Links;
        
           </ul>
         </li>
-        <?php } ?>
+        <?php }*/ ?>
         
          <?php if(User::hasRole('thongketruycap')) { ?>
           <li>
