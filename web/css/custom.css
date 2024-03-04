@@ -5,6 +5,9 @@
     height: auto;
  }
  
+.post-content img{
+	max-width: 100%;
+}
 @media only screen and (max-width: 626px) {
 	 .news-content img{
 	 	max-width: 100%;
