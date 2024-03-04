@@ -104,9 +104,12 @@ class SiteController extends BaseController
         //$this->layout = 'post';
         $this->view->params['showBanner'] = false;
         $model = PostPublic::find()->where(['slug'=>$slug])->one();
-        $this->layout = $model->layoutView;
+       /*  $this->layout = $model->layoutView; */
         
         if($model != null && $model->checkPostAvailable()){
+            
+            $this->layout = $model->layoutView;
+            
             $postOthers = PostPublic::getPostsPublic('POST')->andWhere('id <> '.$model->id)->limit(3)->orderBy(['date_created'=>SORT_DESC])->all();
             
             $this->view->title = $model->seoTitle;
