@@ -149,4 +149,44 @@ class CategoriesBase extends \app\models\NewsCatelogies
             $this->getRandomCode();
         }
     }
+    
+    /**
+     * delete file
+     */
+    public function beforeDelete()
+    {
+        $dirPath = Yii::getAlias('@webroot/images/posts/_categories/'). $this->code;
+        $dirThumbPath = Yii::getAlias('@webroot/images/thumbs/_categories/'). $this->code;
+        if(is_dir($dirPath)){
+            $this->deleteDir($dirPath);
+        }
+        if(is_dir($dirThumbPath)){
+            $this->deleteDir($dirThumbPath);
+        }
+        parent::beforeDelete();
+        return true;
+    }
+    
+    /**
+     * dell folder not used
+     * @return mixed
+     */
+    public static function deleteDir($dirPath) {
+        if (! is_dir($dirPath)) {
+            throw new \InvalidArgumentException("$dirPath must be a directory");
+        }
+        if (substr($dirPath, strlen($dirPath) - 1, 1) != '/') {
+            $dirPath .= '/';
+        }
+        $files = glob($dirPath . '*', GLOB_MARK);
+        foreach ($files as $file) {
+            if (is_dir($file)) {
+                self::deleteDir($file);
+            } else {
+                unlink($file);
+            }
+        }
+        rmdir($dirPath);
+    }
+    
 }

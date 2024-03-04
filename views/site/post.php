@@ -1,7 +1,9 @@
 <div class="post-content post-single">
+	<?php if(isset($this->params['display_cover_first']) && $this->params['display_cover_first']){?>
     <div class="post-media post-image text-center">
         <img loading="lazy" src="<?= $post->imgCover ?>" class="img-fluid" alt="post-image">
     </div>
+    <?php } ?>
     <div class="post-body">
         <div class="entry-header">
             <div class="post-meta">

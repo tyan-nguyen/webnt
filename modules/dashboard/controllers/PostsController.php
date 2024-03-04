@@ -189,17 +189,10 @@ class PostsController extends BaseController
     {
         $request = Yii::$app->request;
         $model = new Posts();
+        
         $modalTitle = Yii::t('app','Add new') .' '. Yii::t('app','Post');
         
-        if($model->postType->enable_languages){
-            if($model->lang == null){
-                $catalogLists = [];
-            } else {
-                $catalogLists = Catelogies::find()->where("pid IS NULL OR pid = 0 AND lang = '" . $model->lang . "'")->all();
-            }
-        } else {
-            $catalogLists = Catelogies::find()->where('pid IS NULL OR pid = 0')->all();
-        }
+        
         
         $code = '';
         if($id != NULL){
@@ -212,6 +205,16 @@ class PostsController extends BaseController
             if($model->postType->enable_tags){
                 $model->tags = $modelMain->tags;
             }
+        }
+        //check posst
+        if($modelMain->postType->enable_languages){
+            if($model->lang == null){
+                $catalogLists = [];
+            } else {
+                $catalogLists = Catelogies::find()->where("pid IS NULL OR pid = 0 AND lang = '" . $model->lang . "'")->all();
+            }
+        } else {
+            $catalogLists = Catelogies::find()->where('pid IS NULL OR pid = 0')->all();
         }
         
         if($request->isAjax){
@@ -501,7 +504,8 @@ class PostsController extends BaseController
         $this->view->title = 'Post #' . $id;
         $catalogLists = array();
         if($model->postType->enable_categories){
-            $catalogLists = Catelogies::find()->where("pid IS NULL OR pid = 0 AND lang = '" . $model->lang . "'")->all();
+            $catalogLists = Catelogies::find()->where("pid IS NULL OR pid = 0 AND lang = '" . $model->lang . "'")
+            ->andFilterWhere(['post_type'=>$model->post_type])->all();
         }else{
             $catalogLists = Catelogies::find()->where('pid IS NULL OR pid = 0')->all();
         }

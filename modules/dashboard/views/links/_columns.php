@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Url;
 use yii\helpers\Html;
-use app\modules\admin\models\Links;
+use app\modules\dashboard\models\Links;
 
 return [
     [

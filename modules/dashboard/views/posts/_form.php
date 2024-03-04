@@ -3,7 +3,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use webvimark\modules\UserManagement\models\User;
 use kartik\select2\Select2;
-use app\modules\admin\models\TagList;
+use app\modules\dashboard\models\TagList;
 use yii\bootstrap\Modal;
 use app\widgets\DocumentWidget;
 use app\widgets\ImageWidget;
@@ -11,7 +11,6 @@ use app\widgets\ImageWidget;
 
 //CrudAsset::register($this);
 /* @var $this yii\web\View */
-/* @var $model app\modules\admin\models\News */
 /* @var $form yii\widgets\ActiveForm */
     $model->taglist = $model->listTagName;
 ?>

@@ -1,7 +1,8 @@
  <?php
  	use webvimark\modules\UserManagement\models\User;
-use app\modules\dashboard\models\PostType;
-use app\modules\dashboard\models\Links;
+    use app\modules\dashboard\models\PostType;
+    use app\modules\dashboard\models\Links;
+use app\modules\dashboard\models\Contact;
  ?>
       <ul class="sidebar-menu" data-widget="tree">
       	<li>
@@ -14,7 +15,7 @@ use app\modules\dashboard\models\Links;
         
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span><?= Yii::t('app', 'New Posts')?></span>
+            <i class="fa fa-dashboard"></i> <span><?= Yii::t('app', 'POSTS')?></span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -43,7 +44,7 @@ use app\modules\dashboard\models\Links;
         
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>New Settings</span>
+            <i class="fa fa-dashboard"></i> <span>LINKS</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -58,62 +59,9 @@ use app\modules\dashboard\models\Links;
           	</ul>
         </li>
         
-        <!-- 
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-dashboard"></i> <span><?= Yii::t('app', 'Pages')?></span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-    		<ul class="treeview-menu">
-            <?php if(User::hasRole('bientapvien')) { ?> 
-            <li><a href="<?= Yii::getAlias('@web') ?>/admin/settings/update-global-presence?id=1"><i class="fa fa-circle-o"></i> <?= Yii::t('app', 'Global Presence')?></a></li>
-            <li><a href="<?= Yii::getAlias('@web') ?>/admin/settings/update-sustainability?id=1"><i class="fa fa-circle-o"></i> <?= Yii::t('app', 'Sustainability')?></a></li>
-            <li><a href="<?= Yii::getAlias('@web') ?>/admin/news/page?lang=vi&static=true"><i class="fa fa-circle-o"></i> <?= Yii::t('app', 'Manage Page')?> (Vi)</a></li> 
-            <li><a href="<?= Yii::getAlias('@web') ?>/admin/news/page?lang=en&static=true"><i class="fa fa-circle-o"></i> <?= Yii::t('app', 'Manage Page')?> (En)</a></li> 
-            <?php } ?>
-            
-           
-          </ul>
-        </li>
-         -->
-       
-        
-       
-          <?php /*if(User::hasRole('bientapvien')) { ?>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-dashboard"></i> <span><?= Yii::t('app', 'SETTINGS')?></span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-          <li><a href="<?= Yii::getAlias('@web') ?>/admin/socials"><i class="fa fa-circle-o"></i> <?= Yii::t('app', 'Socials') ?></a></li>
-          <li><a href="<?= Yii::getAlias('@web') ?>/admin/links"><i class="fa fa-circle-o"></i> <?= Yii::t('app', 'Links') ?></a></li>
-          <li><a href="<?= Yii::getAlias('@web') ?>/admin/carousel"><i class="fa fa-circle-o"></i> <?= Yii::t('app', 'Carousel') ?></a></li>
-          <li><a href="<?= Yii::getAlias('@web') ?>/admin/showcases"><i class="fa fa-circle-o"></i> <?= Yii::t('app', 'Showcases') ?></a></li>
-          <li><a href="<?= Yii::getAlias('@web') ?>/admin/settings/update-showcase?id=1"><i class="fa fa-circle-o"></i> <?= Yii::t('app', 'Showcases Text') ?></a></li>
-          
-          <li><a href="<?= Yii::getAlias('@web') ?>/admin/branches"><i class="fa fa-circle-o"></i> <?= Yii::t('app', 'Branches') ?></a></li>
-          <li><a href="<?= Yii::getAlias('@web') ?>/admin/settings/update-branches?id=1"><i class="fa fa-circle-o"></i> <?= Yii::t('app', 'Branches Text') ?></a></li>
-          
-           <li><a href="<?= Yii::getAlias('@web') ?>/admin/services"><i class="fa fa-circle-o"></i> <?= Yii::t('app', 'Products') ?></a></li>
-          <li><a href="<?= Yii::getAlias('@web') ?>/admin/settings/update-services?id=1"><i class="fa fa-circle-o"></i> <?= Yii::t('app', 'Services Text') ?></a></li>
-          
-           <li><a href="<?= Yii::getAlias('@web') ?>/admin/settings/update-about?id=1"><i class="fa fa-circle-o"></i> <?= Yii::t('app', 'About Text') ?></a></li>
-          <li><a href="<?= Yii::getAlias('@web') ?>/admin/settings/update?id=1"><i class="fa fa-circle-o"></i> <?= Yii::t('app', 'Settings') ?></a></li>
-          
-           <li><a href="<?= Yii::getAlias('@web') ?>/admin/settings/update-contact?id=1"><i class="fa fa-circle-o"></i> <?= Yii::t('app', 'Contact Text') ?></a></li>
-       
-          </ul>
-        </li>
-        <?php }*/ ?>
-        
          <?php if(User::hasRole('thongketruycap')) { ?>
           <li>
-              <a href="<?= Yii::getAlias('@web') ?>/admin/thong-ke-truy-cap">
+              <a href="<?= Yii::getAlias('@web') ?>/dashboard/thong-ke-truy-cap">
               
                 <i class="fa fa-line-chart"></i> <span><?= Yii::t('app', 'USER ACCESS')?></span>
               </a>
@@ -122,7 +70,7 @@ use app\modules\dashboard\models\Links;
          	<li>
               <a href="<?= Yii::getAlias('@web') ?>/dashboard/contact">
               
-                <i class="fa fa-envelope"></i> <span><?= Yii::t('app', 'CONTACT')?></span> <span class="badge"><?= $setting->countNewContactInfo ?></span>
+                <i class="fa fa-envelope"></i> <span><?= Yii::t('app', 'CONTACT')?></span> <span class="badge"><?= (new Contact())->getCountNewContact() ?></span>
               </a>
         	</li>
         	

@@ -42,4 +42,12 @@ class Contact extends \app\models\ViewContact
         $cus = new Custom();
         return $cus->convertYMDHIStoDMYHIS($this->date_created);
     }
+    
+    /**
+     * count contact
+     * @return number|string|NULL
+     */
+    public function getCountNewContact(){
+        return Contact::find()->where(['viewed'=>0])->count();
+    }
 }

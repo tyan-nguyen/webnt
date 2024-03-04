@@ -1,9 +1,7 @@
 <?php
 use yii\helpers\Html;
-use app\modules\admin\models\Settings;
 use app\themes\zero\assets\AdminAssets;
 AdminAssets::register($this);
-$setting = Settings::find()->one();
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -22,11 +20,9 @@ $setting = Settings::find()->one();
   <header class="main-header">
     <!-- Logo -->
     <a href="<?= Yii::getAlias('@web') ?>/admin" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <!-- <span class="logo-mini"><?= Html::img($setting->site_logo_small, ['style'=>'width:40px;height:40px;']) ?></span>-->
-      <span class="logo-mini"><?= Html::img(Yii::getAlias('@web/images/logo_small.png'), ['style'=>'width:40px;height:40px;']) ?></span>
+       <span class="logo-mini"><?= Html::img(Yii::getAlias('@web/images/logo_admin_small.png'), ['style'=>'width:40px;height:40px;']) ?></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><?= Html::img(Yii::getAlias('@web/images/logo.png'), ['style'=>'width:200px']) ?></span>
+      <span class="logo-lg"><?= Html::img(Yii::getAlias('@web/images/logo_admin.png'), ['style'=>'width:200px']) ?></span>
 
     </a>
     <!-- Header Navbar: style can be found in header.less -->
@@ -83,7 +79,7 @@ $setting = Settings::find()->one();
       <!-- sidebar menu: : style can be found in sidebar.less -->
 		<?php 
             //include('admin_left_menu.php')
-               echo $this->render('admin/admin_left_menu', ['setting'=>$setting]);
+               echo $this->render('admin/admin_left_menu');
         ?>
     </section>
     <!-- /.sidebar -->
@@ -116,10 +112,8 @@ $setting = Settings::find()->one();
 
 
   <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <?= $setting->getSiteSource()  ?>
-    </div>
-    <?= $setting->getSiteCopyright()  ?>
+    
+    Copyright @ Nguyễn Trình 2024
     
   </footer>
 
@@ -318,57 +312,6 @@ $setting = Settings::find()->one();
   <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
-
-<?php /* ?>
-<!-- jQuery 3 -->
-<script src="<?= Yii::getAlias('@web') ?>/assets/AdminLTE-2.4.12/bower_components/jquery/dist/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="<?= Yii::getAlias('@web') ?>/assets/AdminLTE-2.4.12/bower_components/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button);
-</script>
-<!-- Bootstrap 3.3.7 -->
-<script src="<?= Yii::getAlias('@web') ?>/assets/AdminLTE-2.4.12/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- Morris.js charts -->
-<script src="<?= Yii::getAlias('@web') ?>/assets/AdminLTE-2.4.12/bower_components/raphael/raphael.min.js"></script>
-<script src="<?= Yii::getAlias('@web') ?>/assets/AdminLTE-2.4.12/bower_components/morris.js/morris.min.js"></script>
-<!-- Sparkline -->
-<script src="<?= Yii::getAlias('@web') ?>/assets/AdminLTE-2.4.12/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-<!-- jvectormap -->
-<script src="<?= Yii::getAlias('@web') ?>/assets/AdminLTE-2.4.12/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="<?= Yii::getAlias('@web') ?>/assets/AdminLTE-2.4.12/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="<?= Yii::getAlias('@web') ?>/assets/AdminLTE-2.4.12/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="<?= Yii::getAlias('@web') ?>/assets/AdminLTE-2.4.12/bower_components/moment/min/moment.min.js"></script>
-<script src="<?= Yii::getAlias('@web') ?>/assets/AdminLTE-2.4.12/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-<!-- datepicker -->
-<script src="<?= Yii::getAlias('@web') ?>/assets/AdminLTE-2.4.12/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<!-- Bootstrap WYSIHTML5 -->
-<script src="<?= Yii::getAlias('@web') ?>/assets/AdminLTE-2.4.12/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-<!-- Slimscroll -->
-<script src="<?= Yii::getAlias('@web') ?>/assets/AdminLTE-2.4.12/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="<?= Yii::getAlias('@web') ?>/assets/AdminLTE-2.4.12/bower_components/fastclick/lib/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="<?= Yii::getAlias('@web') ?>/assets/AdminLTE-2.4.12/dist/js/adminlte.min.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?= Yii::getAlias('@web') ?>/assets/AdminLTE-2.4.12/dist/js/pages/dashboard.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="<?= Yii::getAlias('@web') ?>/assets/AdminLTE-2.4.12/dist/js/demo.js"></script>
-<script src="<?= Yii::getAlias('@web') ?>/assets/AdminLTE-2.4.12/dist/js/custom.js"></script>
-
-<?php */ ?>
-
-
- <script> /*
-			$("a[href='<?= Yii::$app->request->url ?>']").parent().addClass('active');
-			$("a[href='<?= Yii::$app->request->url ?>']").parent().parent().parent().addClass('active');
-*/
-      </script>
-      
-
 <?php
 $currentUrl = Yii::$app->request->url;
 $script = <<< JS
@@ -383,64 +326,9 @@ JS;
 $this->registerJs($script);
 ?>
 
-<script>
-/*
-
-Morris.Line({
-	  element: 'line-chart',
-	  data: [
-	    { y: '2006-01-01', a: 100, b: 90 },
-	    { y: '2006-01-02', a: 75,  b: 65 },
-	    { y: '2006-01-03', a: 50,  b: 40 },
-	    { y: '2006-01-04', a: 75,  b: 65 },
-	    { y: '2006-01-05', a: 50,  b: 40 },
-	    { y: '2006-01-06', a: 75,  b: 65 },
-	    { y: '2006-01-07', a: 100, b: 90 }
-	  ],
-	  xkey: 'y',
-	  ykeys: ['a'],
-	  labels: ['Series A']
-	});
-*/
-</script>
 <?php
 	$dayArrs = \app\models\PcounterByDay::find()->orderBy('day DESC')->limit(7)->all();
 ?>
-<?php /* ?>
-<script>
-// LINE CHART
-var line = new Morris.Line({
-  element: 'line-chart',
-  data: [
-	<?php
-		foreach ($dayArrs as $i=>$day){
-			echo "{y: '".$day->day."', item1: $day->user},";
-		}
-	?>
-	{y: '<?= date('Y-m-d') ?>', item1: <?= number_format(Yii::$app->userCounter->getToday()) ?>},
-  ],
-  xkey: 'y',
-  ykeys: ['item1'],
-  labels: ['Truy cập'],
-  xLabels: 'day',
-  //lineColors: ['#3c8dbc'],
-  //hideHover: 'auto',
-  //resize: true
-});
-
-</script>
-<?php */ ?>
-<script>
-//Date range picker
-/* $('#txtSearchTuNgay').daterangepicker({
-	locale: { format: 'DD/MM/YYYY' }
-}); */
-
-
-</script>
-
-
-
 
 <?php $this->endBody() ?>
 
