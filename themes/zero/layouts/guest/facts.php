@@ -18,7 +18,7 @@
                 <img loading="lazy" src="/ntweb/images/icon-image/fact2.png" alt="facts-img">
               </div>
               <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="1000">0</span>+</h2>
+                <h2 class="ts-facts-num"><span class="counterUp" data-count="446">0</span>+</h2>
                 <h3 class="ts-facts-title">Nhân viên</h3>
               </div>
           </div><!-- Col end -->
@@ -28,8 +28,8 @@
                 <img loading="lazy" src="/ntweb/images/icon-image/fact3.png" alt="facts-img">
               </div>
               <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="100">0</span>+</h2>
-                <h3 class="ts-facts-title">Kỹ sư giàu kinh nghiệm</h3>
+                <h2 class="ts-facts-num"><span class="counterUp" data-count="46">0</span>+</h2>
+                <h3 class="ts-facts-title">Kỹ sư, cửa nhân giàu kinh nghiệm</h3>
               </div>
           </div><!-- Col end -->
 
@@ -38,8 +38,8 @@
                 <img loading="lazy" src="/ntweb/images/icon-image/fact4.png" alt="facts-img">
               </div>
               <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="10000">0</span>+</h2>
-                <h3 class="ts-facts-title">Lượt khách hàng</h3>
+                <h2 class="ts-facts-num"><span class="counterUp" data-count="400">0</span>+</h2>
+                <h3 class="ts-facts-title">Công nhân kỹ thuật thành thạo tay nghề</h3>
               </div>
           </div><!-- Col end -->
 
