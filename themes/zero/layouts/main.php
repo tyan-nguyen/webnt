@@ -19,7 +19,7 @@ AdminAssets::register($this);
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="<?= Yii::getAlias('@web') ?>/admin" class="logo">
+    <a href="<?= Yii::getAlias('@web') ?>/dashboard" class="logo">
        <span class="logo-mini"><?= Html::img(Yii::getAlias('@web/images/logo_admin_small.png'), ['style'=>'width:40px;height:40px;']) ?></span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><?= Html::img(Yii::getAlias('@web/images/logo_admin.png'), ['style'=>'width:200px']) ?></span>
