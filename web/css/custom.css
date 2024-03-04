@@ -12,7 +12,7 @@
 .content .column-title a:hover{
 	color: var(--second-color)!important;
 }
-.content{
+.entry-content p{
 	text-align: justify;
 }
 

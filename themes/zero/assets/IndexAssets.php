@@ -32,7 +32,7 @@ class IndexAssets extends AssetBundle
         //Template styles
         'ntweb/css/theme.css',
         'ntweb/css/style.css',
-        'ntweb/css/custom.css?v=3'
+        'ntweb/css/custom.css?v=4'
     ];
     public $js = [
         //initialize jQuery Library
