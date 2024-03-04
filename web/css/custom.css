@@ -12,6 +12,9 @@
 .content .column-title a:hover{
 	color: var(--second-color)!important;
 }
+.content{
+	text-align: justify;
+}
 
 @media only screen and (max-width: 626px) {
 	 .news-content img{
