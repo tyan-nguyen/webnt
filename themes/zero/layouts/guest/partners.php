@@ -2,13 +2,13 @@
   <div class="container">
     <div class="row">
         <div class="col-lg-6">
-          <h3 class="column-title">Ý kiến</h3>
+          <h3 class="column-title"><a href="/post/thu-ngo">Thư ngỏ</a></h3>
 
           <div id="testimonial-slide" class="testimonial-slide">
               <div class="item">
                 <div class="quote-item">
                     <span class="quote-text">
-                      Nguyễn Trình luôn đặt sự hài lòng của Khách hàng lên hàng đầu.
+                      Với phương châm “<strong>Uy tín, chất lượng và tiến độ</strong>”, chúng tôi luôn lắng nghe, tận tình tư vấn, chia sẻ kinh nghiệm làm việc cùng quý khách hàng
                     </span>
 
                     <div class="quote-item-footer">
