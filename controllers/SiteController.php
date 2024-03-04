@@ -7,6 +7,7 @@ use app\modules\dashboard\models\Posts;
 use app\modules\dashboard\models\PostPublic;
 use app\modules\dashboard\models\TagList;
 use app\modules\dashboard\models\Contact;
+use app\modules\dashboard\models\Options;
 
 class SiteController extends BaseController
 {
@@ -17,7 +18,10 @@ class SiteController extends BaseController
      * homepage
      */
     public function actionIndex()
-    {        
+    {
+        $setting = Options::getOptions('SETTING');
+        $this->view->title = $setting['site_seo_title'];
+        $this->view->params['meta_description'] = $setting['site_seo_description'];
         return $this->render('index');
     }
     
@@ -46,12 +50,17 @@ class SiteController extends BaseController
         
         //$listPosts = Posts::getPostByType('POST',10);
         $listPosts = PostPublic::getPostsPublic('POST');
-        
+        $this->view->title = $this->view->params['title'];
+        $this->view->params['meta_description'] = 'Tin tức sự kiện mới nhất';
         //for one category
         if($slug != NULL){
             $category = Catelogies::find()->where(['slug'=>$slug])->one();
             $this->view->params['image'] = ($category->cover!=null?$category->cover:'/ntweb/images/banner/default.jpg');
             $this->view->params['title'] = $category->name;
+            
+            $this->view->title = $category->seoTitle;
+            $this->view->params['meta_description'] = $category->seoDescription;
+            
             $this->view->params['breadcrumb'] = [
                 [
                     'label'=>'Trang chủ',
@@ -99,6 +108,10 @@ class SiteController extends BaseController
         
         if($model != null && $model->checkPostAvailable()){
             $postOthers = PostPublic::getPostsPublic('POST')->andWhere('id <> '.$model->id)->limit(3)->orderBy(['date_created'=>SORT_DESC])->all();
+            
+            $this->view->title = $model->seoTitle;
+            $this->view->params['meta_description'] = $model->seoDescription;
+            
             return $this->render('post', [
                 'post'=>$model,
                 'postOthers'=>$postOthers
@@ -144,6 +157,9 @@ class SiteController extends BaseController
             $listPosts = $listPosts->offset($page*$numPerPage-$numPerPage)->limit($numPerPage)
             ->orderBy(['date_created'=>SORT_DESC])->all();
             
+            $this->view->title = 'Thẻ: '. $tag->name;
+            $this->view->params['meta_description'] = 'Bài viết được gắn thẻ: '. $tag->name;
+            
             return $this->render('posts', [
                 'listPosts'=>$listPosts,
                 'prev' => $page>1 ? ($page-1) : null,
@@ -183,6 +199,9 @@ class SiteController extends BaseController
         $listPosts = $listPosts->offset($page*$numPerPage-$numPerPage)->limit($numPerPage)
         ->orderBy(['date_created'=>SORT_DESC])->all();
         
+        $this->view->title = 'Từ khóa: '. $_GET['search'];
+        $this->view->params['meta_description'] = 'Kết quả tìm kiếm cho từ khóa: '. $_GET['search'];
+        
         return $this->render('posts', [
             'listPosts'=>$listPosts,
             'prev' => $page>1 ? ($page-1) : null,
@@ -214,6 +233,9 @@ class SiteController extends BaseController
                 'active'=>true
             ]
         ];
+        //seo
+        $this->view->title = 'Thông tin liên hệ';
+        $this->view->params['meta_description'] = 'Thông tin liên hệ';
         return $this->render('contact');
     }
     
@@ -247,6 +269,9 @@ class SiteController extends BaseController
                         'active'=>true
                     ]
                 ];
+                //seo
+                $this->view->title = 'Thông tin liên hệ';
+                $this->view->params['meta_description'] = 'Thông tin liên hệ';
                 return $this->render('contact_success');
             }
         }
@@ -274,6 +299,9 @@ class SiteController extends BaseController
                 'active'=>true
             ]
         ];
+        //seo
+        $this->view->title = 'Trang 404';
+        $this->view->params['meta_description'] = 'Trang bạn yêu cầu không tìm thấy';
         return $this->render('404');
     }
     

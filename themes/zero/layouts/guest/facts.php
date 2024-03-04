@@ -29,7 +29,7 @@
               </div>
               <div class="ts-facts-content">
                 <h2 class="ts-facts-num"><span class="counterUp" data-count="46">0</span>+</h2>
-                <h3 class="ts-facts-title">Kỹ sư, cửa nhân giàu kinh nghiệm</h3>
+                <h3 class="ts-facts-title">Kỹ sư, Cử nhân giàu kinh nghiệm</h3>
               </div>
           </div><!-- Col end -->
 
