@@ -5,9 +5,10 @@
     </div>
     <?php } ?>
     <div class="post-body">
-    
+    	
+    	<?php if ($post->getCategoriesView() !=null){?>
         <div class="entry-header">
-        	<?php if ($post->getCategoriesView() !=null){?>
+        	
             <div class="post-meta">
                 <span class="post-cat">
                     <i class="far fa-folder-open"></i>
@@ -15,12 +16,18 @@
                 </span>
                 <span class="post-meta-date"><i class="far fa-calendar"></i> <?= $post->dateCreated ?></span>
             </div>
-            <?php } ?>
+            
             <h2 class="entry-title">
                 <?= $post->title ?>
             </h2>
         </div><!-- header end -->
-     
+     <?php } else { ?>
+     	<div class="entry-header">        	
+            <h2 class="entry-title text-center" style="text-transform: uppercase;">
+                <?= $post->title ?>
+            </h2>
+        </div><!-- header end -->
+     <?php } ?>
         <div class="entry-content">
             <?= $post->content ?>
         </div>
