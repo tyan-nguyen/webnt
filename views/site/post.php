@@ -5,6 +5,7 @@
     </div>
     <?php } ?>
     <div class="post-body">
+    <?php if ($post->getCategoriesView() !=null){?>
         <div class="entry-header">
             <div class="post-meta">
                 <span class="post-cat">
@@ -17,6 +18,7 @@
                 <?= $post->title ?>
             </h2>
         </div><!-- header end -->
+     <?php } ?>
         <div class="entry-content">
             <?= $post->content ?>
         </div>
