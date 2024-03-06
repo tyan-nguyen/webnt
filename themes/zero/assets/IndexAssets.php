@@ -30,9 +30,9 @@ class IndexAssets extends AssetBundle
         //Colorbox
         'ntweb/plugins/colorbox/colorbox.css',
         //Template styles
-        'ntweb/css/theme.css',
+        'ntweb/css/theme.css?v=1',
         'ntweb/css/style.css',
-        'ntweb/css/custom.css?v=5'
+        'ntweb/css/custom.css?v=6'
     ];
     public $js = [
         //initialize jQuery Library

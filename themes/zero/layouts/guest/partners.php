@@ -1,4 +1,4 @@
-<section class="content" style="background-color: #f9f9f9">
+<section class="content content-dark">
   <div class="container">
     <div class="row">
         <div class="col-lg-6">
