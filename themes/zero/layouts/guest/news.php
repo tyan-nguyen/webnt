@@ -42,7 +42,7 @@ $posts = Posts::getPostByType('POST',3);
     <!--/ Content row end -->
 
     <div class="general-btn text-center mt-4">
-        <a class="btn btn-primary" href="/all-posts">Xem thêm</a>
+        <a class="btn btn-primary" href="/posts">Xem thêm</a>
     </div>
 
   </div>
