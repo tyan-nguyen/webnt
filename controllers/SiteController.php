@@ -22,6 +22,7 @@ class SiteController extends BaseController
         $setting = Options::getOptions('SETTING');
         $this->view->title = $setting['site_seo_title'];
         $this->view->params['meta_description'] = $setting['site_seo_description'];
+        
         return $this->render('index');
     }
     
