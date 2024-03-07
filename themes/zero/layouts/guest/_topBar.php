@@ -4,7 +4,7 @@ $socialLink = Links::find()->where(['type'=>'SOCIAL_LINK'])->all();
 $setting = \app\modules\dashboard\models\Options::getOptions('SETTING');
 ?>
 <div id="top-bar" class="top-bar">
-        <div class="container">
+    <div class="container">
           <div class="row">
             <div class="col-lg-2 .d-none .d-md-block .d-lg-block">
 
@@ -38,13 +38,9 @@ $setting = \app\modules\dashboard\models\Options::getOptions('SETTING');
           <!--/ Top social end -->
           </div>
        
-        </div>
-
-
-
-
+        	</div>
           
-      </div>
+      	</div>
       <!--/ Content row end -->
     </div>
     <!--/ Container end -->

@@ -21,7 +21,8 @@
                 </div><!-- Quote item end -->
               </div>
               <!--/ Item 1 end -->
-
+				
+				<?php /* ?>
               <div class="item">
                 <div class="quote-item">
                     <span class="quote-text">
@@ -59,6 +60,7 @@
                 </div><!-- Quote item end -->
               </div>
               <!--/ Item 3 end -->
+              <?php */ ?>
 
           </div>
           <!--/ Testimonial carousel end-->

@@ -85,7 +85,7 @@ $setting = Options::getOptions('SETTING');
           <?php 
           foreach ($footerLink as $iLink=>$link){
           ?>
-          <li><a <?= $link->open_new_tab ? 'target="_bank"' : '' ?> href="<?= $link->link ?>"><?= $link->name ?></a></li>
+          <li><a <?= $link->open_new_tab ? 'target="_blank"' : '' ?> href="<?= $link->link ?>"><?= $link->name ?></a></li>
           <?php     
           }
           ?>
