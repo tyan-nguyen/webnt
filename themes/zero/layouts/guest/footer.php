@@ -13,9 +13,14 @@ $setting = Options::getOptions('SETTING');
   <div class="container">
     <div class="row justify-content-between">
       <div class="col-lg-4 col-md-6 footer-widget footer-about">
-        <h3 class="widget-title">Về chúng tôi</h3>
-        <img loading="lazy" class="footer-logo" src="<?= $setting['site_logo_white'] ?>" alt="Constra">
-        <p><?= $setting['site_description'] ?></p>
+        <h3 class="widget-title">Thông tin</h3>
+        <!-- <img loading="lazy" class="footer-logo" src="<?= $setting['site_logo_white'] ?>" alt="Constra"> -->
+        <p class="big-title"><strong><?= $setting['site_name'] ?></strong></p>
+        <!-- <p><?= $setting['site_description'] ?></p>-->
+        <p>Địa chỉ: <?= $setting['site_address'] ?></p>
+        <p>Email: <?= $setting['site_mst'] ?></p>
+        <p>Số điện thoại: <?= $setting['site_hotline'] ?></p>
+        <p>Email: <?= $setting['site_email'] ?></p>
         <div class="footer-social">
           <ul>
           	<?php 
@@ -32,8 +37,11 @@ $setting = Options::getOptions('SETTING');
      <!-- Col end -->
 
       <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 footer-widget">
-        <h3 class="widget-title">Liên kết</h3>
-        <ul class="list-arrow">
+        <h3 class="widget-title">Facebook</h3>
+        <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v19.0" nonce="BGqRmGdJ"></script>
+        <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=100094631493232" data-tabs="timeline" data-width="" data-height="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/profile.php?id=100094631493232" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=100094631493232">Nguyễn Trình Group</a></blockquote></div>
+        <!-- <ul class="list-arrow">
         	<?php 
           foreach ($footerLink as $iLink=>$link){
           ?>
@@ -42,11 +50,11 @@ $setting = Options::getOptions('SETTING');
           }
           ?>
         
-        </ul>
+        </ul>-->
       </div><!-- Col end -->
 
       <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
-        <h3 class="widget-title">Bản đồ</h3>
+        <h3 class="widget-title">Địa điểm</h3>
         <div class="working-hours">
          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.63233749748625!2d106.3375597152774!3d9.924179611521206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0175b80077a69%3A0x88e890ee0daf9887!2zQ-G7rWEgSMOgbmcgTmjDtG0gS8OtbmggLSBT4bqvdCBWbHhkIE5ndXnhu4VuIFRyw6xuaA!5e0!3m2!1svi!2s!4v1708161529516!5m2!1svi!2s" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>

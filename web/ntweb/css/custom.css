@@ -263,6 +263,14 @@ h1, h2, h3, h4, h5, h6 {
     background-size:cover;
 }
 
+.footer-about p{
+	margin-bottom: 0px;
+}
+
+.big-title{
+	font-size: 16px;
+	font-weight: bold;
+}
 .copyright {
     /*background: var(--third-color);*/
     background: none;
@@ -270,8 +278,14 @@ h1, h2, h3, h4, h5, h6 {
     padding: 25px 0;
     position: relative;
     z-index: 1;
-    font-weight: 600;
-    font-size: 12px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.copyright ul li a {
+    font-weight: 500;
+}
+.copyright ul li a:hover {
+    color: var(--second-color);
 }
 
 .footer-logo {
