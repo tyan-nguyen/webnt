@@ -40,7 +40,7 @@ $setting = Options::getOptions('SETTING');
         <h3 class="widget-title">Facebook</h3>
         <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v19.0" nonce="BGqRmGdJ"></script>
-        <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=100094631493232" data-tabs="timeline" data-width="" data-height="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/profile.php?id=100094631493232" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=100094631493232">Nguyễn Trình Group</a></blockquote></div>
+        <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=100094631493232" data-tabs="timeline" data-width="100%" data-height="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/profile.php?id=100094631493232" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=100094631493232">Nguyễn Trình Group</a></blockquote></div>
         <!-- <ul class="list-arrow">
         	<?php 
           foreach ($footerLink as $iLink=>$link){
