@@ -1,7 +1,7 @@
 <?php 
 use app\modules\dashboard\models\Posts;
 
-$posts = Posts::getPostByType('POST',3);
+$posts = Posts::getPostByType('POST',3,'hoat-dong-doanh-nghiep');
 ?>
 <section id="news" class="news">
   <div class="container">

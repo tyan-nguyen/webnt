@@ -62,7 +62,7 @@ class PostPublic extends Posts
     /**
      * view categories in gridview
      */
-    public function getCategoriesView(){
+    public function getCategoriesView($showLink=true){
         $result = '';
         $list = explode(';', $this->categories);
         $numList = count($list);
@@ -71,7 +71,11 @@ class PostPublic extends Posts
             $i++;
             $cat = Catelogies::find()->where(['slug'=>$item])->one();
             if($cat != null){
-                $result .= '<a href="'.$cat->url.'">' . $cat->name . '</a>';
+                if($showLink == true){
+                    $result .= '<a href="'.$cat->url.'">' . $cat->name . '</a>';
+                } else {
+                    $result .= $cat->name;
+                }
                 if($numList>1 && $i<$numList)
                     $result .= '&nbsp;/&nbsp;';
             }

@@ -32,7 +32,7 @@ class IndexAssets extends AssetBundle
         //Template styles
         'ntweb/css/theme.css?v=1',
         'ntweb/css/style.css',
-        'ntweb/css/custom.css?v=7'
+        'ntweb/css/custom.css?v=8'
     ];
     public $js = [
         //initialize jQuery Library
@@ -47,7 +47,7 @@ class IndexAssets extends AssetBundle
         //shuffle
         'ntweb/plugins/shuffle/shuffle.min.js',
         //Template custom
-        'ntweb/js/script.js'
+        'ntweb/js/script.js?v=2'
     ];
     public $depends = [
         //'yii\web\YiiAsset',

@@ -23,6 +23,9 @@ class Posts extends PostsBase
      * get new link publish
      */
     public function getUrl(){
+        if($this->postType->code=='PROJECT'){
+            return Yii::getAlias('@web/project/') . $this->slug;
+        }
         return Yii::getAlias('@web/post/') . $this->slug;
     }
     

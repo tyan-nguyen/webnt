@@ -1,44 +1,26 @@
-<?php 
-use app\modules\dashboard\models\Posts;
-
-$posts = Posts::getPostByType('POST',5, 'video');
-?>
-
 <section class="content content-dark">
   <div class="container">
     <div class="row">
-        <div class="col-lg-5">
-          <h3 class="column-title"><a href="/posts/video">VIDEO</a></h3>
+        <div class="col-lg-6">
+          <h3 class="column-title"><a href="/post/thu-ngo">Thư ngỏ</a></h3>
 
           <div id="testimonial-slide" class="testimonial-slide">
-              <?php foreach ($posts as $iPost=>$post){ ?>
-		
-          
               <div class="item">
-                
-                  <div class="latest-post">
-                      <div class="latest-post-media position-relative itemsContainer">
-                        <a href="<?= $post->url ?>" class="latest-post-img">
-                            <img loading="lazy" class="img-fluid" src="<?= $post->imgCover ?>" alt="img">
-                            <div class="btn-play"><img src="/images/icons/play.png"> </div>
-                        </a>
-                        
+                <div class="quote-item">
+                    <span class="quote-text">
+                      Với phương châm “<strong>Uy tín, chất lượng và tiến độ</strong>”, chúng tôi luôn lắng nghe, tận tình tư vấn, chia sẻ kinh nghiệm làm việc cùng quý khách hàng
+                    </span>
+
+                    <div class="quote-item-footer">
+                      <img loading="lazy" class="testimonial-thumb" src="/ntweb/images/clients/ceo.png" alt="testimonial">
+                      <div class="quote-item-info">
+                          <h3 class="quote-author">Ông Nguyễn Văn Trình</h3>
+                          <span class="quote-subtext">Chủ doanh nghiệp</span>
                       </div>
-                      <div class="post-body">
-                        <h4 class="post-title">
-                            <a href="<?= $post->url ?>" class="d-inline-block"><?= $post->title ?></a>
-                        </h4>
-                        <!-- <div class="latest-post-meta">
-                            <span class="post-item-date">
-                              <i class="fa fa-clock-o"></i><?= $post->dateCreated ?>
-                            </span>
-                        </div>-->
-                      </div>
-                  </div><!-- Latest post end -->
-                
+                    </div>
+                </div><!-- Quote item end -->
               </div>
               <!--/ Item 1 end -->
-		<?php } ?>	
 				
 				<?php /* ?>
               <div class="item">
@@ -84,7 +66,7 @@ $posts = Posts::getPostByType('POST',5, 'video');
           <!--/ Testimonial carousel end-->
         </div><!-- Col end -->
 
-        <div class="col-lg-6 mt-5 mt-lg-0 partner-wrap">
+        <div class="col-lg-6 mt-5 mt-lg-0">
 
           <h3 class="column-title">Đối tác của chúng tôi</h3>
 

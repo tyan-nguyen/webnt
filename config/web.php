@@ -110,6 +110,10 @@ $config = [
                 'post/<slug>' => 'site/post',
                 'posts/<slug>' => 'site/posts',
                 'posts' => 'site/posts',
+                'project/<slug>' => 'site/project',
+                'projects/<slug>' => 'site/projects',
+                'projects' => 'site/projects',
+  
                 'tag/<slug>' => 'site/tag',
                 'contact' => 'site/contact',
                 'search'=>'site/search',

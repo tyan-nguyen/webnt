@@ -1,6 +1,35 @@
 .content-dark{
 	background-color: var(--four-color);
 }
+
+.content-posts{
+	
+}
+.partner-wrap{
+	padding-left: 100px;	
+}
+.content-posts .latest-post{
+	padding:10px;
+}
+
+.all-clients div{
+	margin-bottom: 20px;
+	
+}
+
+.subscribe {
+    background: var(--third-color);
+    padding: 0;
+}
+
+.newsletter-form input {
+    border: 1px solid var(--third-color);
+}
+
+.subscribe h4{
+    color: var(--second-color)!important;
+    padding: 0;
+}
 .post-content img{
 	max-width: 100% !important;
 }
@@ -184,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .ts-newsletter {
-    background: var(--third-color);
+    background: var(--four-color);
     position: relative;
     min-height: 115px;
     padding: 15px 0 0 50px;
@@ -342,7 +371,7 @@ ul.top-info li p.info-text{
 }
 
 .ts-newsletter:after {
-    background:var(--third-color);
+    background:var(--four-color);
 }
 
 .action-title {
@@ -427,6 +456,25 @@ ul.navbar-nav > li > a {
     background: var(--third-color);
 }
 
+/*showcase*/
+.itemsContainer:hover .btn-play{display:block; opacity: 1;}
+.btn-play{
+  position : absolute;
+    /*display:none;*/
+    display:block; 
+    opacity: 0.7;
+    top:30%; 
+    width:80px;
+    margin:0 auto; left:0px;
+    right:0px;
+    z-index:100;
+    cursor: pointer;
+} 
+.btn-play img{
+	width: 100%;
+}
+/*showcase_end*/
+
 
 .nav-item-logo{
     display: none;
@@ -460,6 +508,14 @@ ul.navbar-nav > li > a {
         background-position: left;
         background-size: 100% auto;
     }
+    
+}
+
+@media (max-width: 769px){
+   .partner-wrap{
+		padding-left: 20px;   
+   }
+    
 }
 
 

@@ -574,8 +574,11 @@ class PostsController extends BaseController
              */
             if ($model->load($request->post())) {
                 //reload theo lang moi
-                $catalogLists = Catelogies::find()->where("pid IS NULL OR pid = 0 AND lang = '" . $model->lang . "'")->all();
-                
+                if($model->postType->enable_categories){
+                    $catalogLists = Catelogies::find()->where("pid IS NULL OR pid = 0 AND lang = '" . $model->lang . "'")->andFilterWhere(['post_type'=>$model->post_type])->all();
+                }else{                   
+                    $catalogLists = Catelogies::find()->where("pid IS NULL OR pid = 0 AND lang = '" . $model->lang . "'")->all();
+                }
                 //categories
                 if($model->catalog != null){
                     $arr = array();

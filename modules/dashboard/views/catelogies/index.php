@@ -26,10 +26,10 @@ CrudAsset::register($this);
             'columns' => require(__DIR__.'/_columns.php'),
             'toolbar'=> [
                 ['content'=>
-                    Html::a('<i class="glyphicon glyphicon-plus"></i> ' . Yii::t('app', 'Add new'), ['create?postType='.$postType->code],
+                    Html::a('<i class="glyphicon glyphicon-plus"></i> ' . Yii::t('app', 'Add new'), ['create?post_type='.$postType->code],
                         ['role'=>'modal-remote','title'=> Yii::t('app','Create new') .' '. Yii::t('app','Categories'),'class'=>'btn btn-default']).
                             
-                    Html::a('<i class="glyphicon glyphicon-plus"></i> ' . Yii::t('app', 'Add full'), ['create-full?postType='.$postType->code],
+                    Html::a('<i class="glyphicon glyphicon-plus"></i> ' . Yii::t('app', 'Add full'), ['create-full?post_type='.$postType->code],
                         ['data-pjax'=>0,'title'=> Yii::t('app','Create full') .' '. Yii::t('app','Categories'),'class'=>'btn btn-default']).
                             
                     

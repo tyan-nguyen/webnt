@@ -126,6 +126,105 @@ class SiteController extends BaseController
     }
     
     /**
+     * dự án
+     */
+    public function actionProjects($slug=NULL, $page=NULL)
+    {
+        $this->layout = 'post';
+        $this->view->params['showBanner'] = true;
+        //all posts
+        $this->view->params['image'] = '/ntweb/images/banner/default.jpg';
+        $this->view->params['title'] = 'Tất cả dự án';
+        $this->view->params['breadcrumb'] = [
+            [
+                'label'=>'Trang chủ',
+                'url' => '#',
+                'active'=>false
+            ],
+            [
+                'label'=>'Dự án',
+                'url' => '',
+                'active'=>true
+            ]
+        ];
+        
+        //$listPosts = Posts::getPostByType('POST',10);
+        $listPosts = PostPublic::getPostsPublic('PROJECT');
+        $this->view->title = $this->view->params['title'];
+        $this->view->params['meta_description'] = 'Tất cả dự án';
+        //for one category
+        if($slug != NULL){
+            $category = Catelogies::find()->where(['slug'=>$slug])->one();
+            $this->view->params['image'] = ($category->cover!=null?$category->cover:'/ntweb/images/banner/default.jpg');
+            $this->view->params['title'] = $category->name;
+            
+            $this->view->title = $category->seoTitle;
+            $this->view->params['meta_description'] = $category->seoDescription;
+            
+            $this->view->params['breadcrumb'] = [
+                [
+                    'label'=>'Trang chủ',
+                    'url' => '#',
+                    'active'=>false
+                ],
+                [
+                    'label'=>$category->name,
+                    'url' => '',
+                    'active'=>true
+                ]
+            ];
+            
+            //$listPosts = Posts::getPostByType('POST',10,$category->slug);
+            $listPosts = PostPublic::getPostsPublic('PROJECT',$category->slug);
+            
+        }
+        $numPost = $listPosts->count();
+        if($page == NULL)
+            $page = 1;
+            $numPerPage = 10;
+            $numPage = ceil($numPost/$numPerPage);
+            
+            $listPosts = $listPosts->offset($page*$numPerPage-$numPerPage)->limit($numPerPage)
+            ->orderBy(['date_created'=>SORT_DESC])->all();
+            
+            return $this->render('posts', [
+                'listPosts'=>$listPosts,
+                'prev' => $page>1 ? ($page-1) : null,
+                'next' => $page < $numPage ? ($page+1) : null,
+                'current' => $page,
+                'total' => $numPage
+            ]);
+    }
+    
+    /**
+     * post
+     */
+    public function actionProject($slug)
+    {
+        //$this->layout = 'post';
+        $this->view->params['showBanner'] = false;
+        $model = PostPublic::find()->where(['slug'=>$slug])->one();
+        /*  $this->layout = $model->layoutView; */
+        
+        if($model != null && $model->checkPostAvailable()){
+            
+            $this->layout = $model->layoutView;
+            
+            $postOthers = PostPublic::getPostsPublic('PROJECT')->andWhere('id <> '.$model->id)->limit(3)->orderBy(['date_created'=>SORT_DESC])->all();
+            
+            $this->view->title = $model->seoTitle;
+            $this->view->params['meta_description'] = $model->seoDescription;
+            
+            return $this->render('post', [
+                'post'=>$model,
+                'postOthers'=>$postOthers
+            ]);
+        } else {
+            $this->redirect('/404');
+        }
+    }
+    
+    /**
      * tags
      */
     public function actionTag($slug, $page=NULL)

@@ -32,6 +32,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 	<?= $this->render('guest/facts') ?>
 	<?= $this->render('guest/why') ?>
 	<?= $this->render('guest/partners') ?>
+	<?= $this->render('guest/project') ?>
+	<?php // $this->render('guest/video') ?>
+	<?= $this->render('guest/subcribe') ?>
 	<?= $this->render('guest/news') ?>
 	
 	<?= $this->render('guest/footer') ?>
