@@ -29,6 +29,7 @@
         </div><!-- header end -->
      <?php } ?>
         <div class="entry-content">
+        	<p><?= $post->summary ?></p>
             <?= $post->content ?>
         </div>
         <div class="tags-area d-flex align-items-center justify-content-between">
