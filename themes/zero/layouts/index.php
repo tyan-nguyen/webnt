@@ -14,7 +14,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => $this->params['met
 $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? 'nguyen trinh tra vinh, sat thep, cua nhom, ep coc, be tong, vat lieu xay dung']);
 $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/favicon1.ico')]);
 
-$this->registerMetaTag(['property'=>'og:image', 'content'=>$this->params['meta_image'] ?? '/images/default.jpg']);
+$this->registerMetaTag(['property'=>'og:image', 'content'=>$this->params['meta_image'] ?? 'https://nguyentrinh.com.vn/images/default.jpg']);
 
 
 $this->registerMetaTag(['name'=>'geo.region', 'content'=>'VN-TV']);
