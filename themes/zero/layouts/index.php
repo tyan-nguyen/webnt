@@ -14,6 +14,11 @@ $this->registerMetaTag(['name' => 'description', 'content' => $this->params['met
 $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
 $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/favicon1.ico')]);
 
+$this->registerMetaTag(['name'=>'geo.region', 'content'=>'VN-TV']);
+$this->registerMetaTag(['name'=>'geo.placename', 'content'=>'Trà Vinh']);
+$this->registerMetaTag(['name'=>'geo.position', 'content'=>'9.9242715, 106.3373696']);
+$this->registerMetaTag(['name'=>'ICBM', 'content'=>'9.9242715, 106.3373696']);
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
