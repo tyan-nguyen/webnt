@@ -18,7 +18,7 @@ $setting = Options::getOptions('SETTING');
         <p class="big-title"><strong><?= $setting['site_name'] ?></strong></p>
         <!-- <p><?= $setting['site_description'] ?></p>-->
         <p>Địa chỉ: <?= $setting['site_address'] ?></p>
-        <p>Email: <?= $setting['site_mst'] ?></p>
+        <p>Mã số thuế: <?= $setting['site_mst'] ?></p>
         <p>Số điện thoại: <?= $setting['site_hotline'] ?></p>
         <p>Email: <?= $setting['site_email'] ?></p>
         <div class="footer-social">
