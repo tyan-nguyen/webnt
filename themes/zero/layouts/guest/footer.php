@@ -109,7 +109,7 @@ $setting = Options::getOptions('SETTING');
     </a>
     
      <a id="call" href="tel:<?= $setting['site_hotline'] ?>">
-          <img src="/images/icons/call.png" width="35px" height="" style="padding-bottom: 2px">
+          <img class="trin-trin" src="/images/icons/call.png" width="35px" height="" style="padding-bottom: 2px">
     </a>
 
   </div><!-- Container end -->
