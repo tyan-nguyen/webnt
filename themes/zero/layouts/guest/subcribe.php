@@ -19,7 +19,7 @@ $setting = \app\modules\dashboard\models\Options::getOptions('SETTING');
               </div>
 
               <div class="col-md-7 newsletter-form">
-                <form action="/site/subcribe-contact" method="post">
+                <form action="/subcribe-contact" method="post">
                     <div class="form-group">
                       <label for="newsletter-email" class="content-hidden">Đăng ký nhận thông tin</label>
                       <input type="text" name="phone" id="newsletter-phone" class="form-control form-control-lg" placeholder="Nhập số điện thoại và Enter..." autocomplete="off">

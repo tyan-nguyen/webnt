@@ -60,7 +60,7 @@
         <h3 class="column-title">GỬI YÊU CẦU CHO CHÚNG TÔI</h3>
         <!-- contact form works with formspree.io  -->
         <!-- contact form activation doc: https://docs.themefisher.com/constra/contact-form/ -->
-        <form id="contact-form" action="/site/info-contact" method="post" role="form">
+        <form id="contact-form" action="/info-contact" method="post" role="form">
           <div class="error-container"></div>
           <div class="row">
             <div class="col-md-4">

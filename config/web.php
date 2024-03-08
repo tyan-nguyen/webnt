@@ -116,6 +116,8 @@ $config = [
   
                 'tag/<slug>' => 'site/tag',
                 'contact' => 'site/contact',
+                'info-contact' => 'site/info-contact',
+                'subcribe-contact' => 'site/subcribe-contact',
                 'search'=>'site/search',
                 '404'=>'site/404',
             	/* '/'=>'admin/default/index',
