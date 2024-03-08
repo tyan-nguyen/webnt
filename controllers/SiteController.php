@@ -115,6 +115,7 @@ class SiteController extends BaseController
             
             $this->view->title = $model->seoTitle;
             $this->view->params['meta_description'] = $model->seoDescription;
+            $this->view->params['meta_image'] = $model->seoImage;
             
             return $this->render('post', [
                 'post'=>$model,

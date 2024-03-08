@@ -255,6 +255,10 @@ class Posts extends PostsBase
         return $this->seo_description == null ? $this->summary : $this->seo_description;
     }
     
+    public function getSeoImage(){
+        return $this->seo_image == null ? $this->seo_image : $this->imgCover;
+    }
+    
     
     public function getLangList(){
         return Posts::find()->select(['id', 'lang'])->where(['code'=>$this->code])->orderBy('lang DESC')->asArray()->all();
