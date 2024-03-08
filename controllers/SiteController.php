@@ -383,6 +383,45 @@ class SiteController extends BaseController
     }
     
     /**
+     * get contact info from contact page
+     * @return string
+     */
+    public function actionSubcribeContact(){
+        $request = Yii::$app->request;
+        if(isset($_POST['phone'])){
+            $contact = new Contact();
+            $contact->name = 'Khách hàng';
+            $contact->email = 'Không có';
+            $contact->phone = $_POST['phone'];
+            $contact->subject = 'Từ khung Subcribe';
+            $contact->message = 'Gọi lại cho tôi';
+            if($contact->save()){
+                $this->layout = 'page';
+                $this->view->params['showBanner'] = true;
+                $this->view->params['image'] = '/ntweb/images/banner/default.jpg';
+                $this->view->params['title'] = 'Liên hệ';
+                $this->view->params['breadcrumb'] = [
+                    [
+                        'label'=>'Trang chủ',
+                        'url' => '#',
+                        'active'=>false
+                    ],
+                    [
+                        'label'=>'Liên hệ',
+                        'url' => '',
+                        'active'=>true
+                    ]
+                ];
+                //seo
+                $this->view->title = 'Thông tin liên hệ';
+                $this->view->params['meta_description'] = 'Thông tin liên hệ';
+                return $this->render('contact_success');
+            }
+        }
+        return $this->redirect('/site/contact');
+    }
+    
+    /**
      * 404 not found
      */
     public function action404()

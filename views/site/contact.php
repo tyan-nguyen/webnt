@@ -73,7 +73,7 @@
             <div class="col-md-4">
               <div class="form-group">
                 <label>Số điện thoại</label>
-                <input class="form-control form-control-phone" name="phone" id="phone" placeholder="" type="tel"             required>
+                <input class="form-control form-control-phone" name="phone" id="phone" placeholder="" type="tel" required>
               </div>
             </div>
             <div class="col-md-4">
