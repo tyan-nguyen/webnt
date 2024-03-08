@@ -7,7 +7,7 @@ $setting = \app\modules\dashboard\models\Options::getOptions('SETTING');
         <div class="col-lg-4">
           <div class="subscribe-call-to-acton">
               <h3>GỌI NGAY</h3>
-              <h4><?= $setting['site_hotline_text']?></h4>
+              <h4><a href="tel:<?= $setting['site_hotline']?>"><?= $setting['site_hotline']?></a></h4>
           </div>
         </div><!-- Col end -->
 
