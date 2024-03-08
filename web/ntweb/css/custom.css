@@ -516,6 +516,11 @@ ul.navbar-nav > li > a {
    .partner-wrap{
 		padding-left: 20px;   
    }
+   
+   ul.top-info-box li {
+	    padding-right: 10px;
+	    margin-right: 10px;
+    }
     
 }
 
