@@ -9,8 +9,8 @@
   <div class="container">
     <div class="row text-center">
       <div class="col-lg-12">
-        <h2 class="section-title">Công trình, dự án</h2>
-        <h3 class="section-sub-title">Dự án đã thực hiện</h3>
+        <h2 class="section-title">Nhà xưởng, Công trình, Dự án</h2>
+        <h3 class="section-sub-title">Dự án đã thực hiện của Nguyễn Trình</h3>
       </div>
     </div>
     <!--/ Title row end -->
