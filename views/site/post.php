@@ -41,9 +41,9 @@
             </div>
             <div class="share-items">
                 <ul class="post-social-icons list-unstyled">
-                    <li class="social-icons-head">Share:</li>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="social-icons-head">Chia sẻ:</li>
+                    <li><a href="https://www.facebook.com/sharer/sharer.php?u=#<?= $post->url ?>"><i class="fab fa-facebook-f"></i></a></li>
+                    
                 </ul>
             </div>
         </div>
