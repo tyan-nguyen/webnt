@@ -38,14 +38,17 @@
                       </div>
                     </div>
                   </li>
-                  <li class="last d-block d-md-none">
+                  <!-- <li class="last d-block d-md-none">
                       <a class="btn btn-primary" href="tel:<?= $setting['site_hotline'] ?>" style="color:white"><i class="fas fa-phone-alt"></i>&nbsp; GỌI NGAY</a>
-                  </li>
-                  <li class="header-get-a-quote last d-none d-md-block">
+                  </li> -->
+                  <!-- <li class="header-get-a-quote last d-none d-md-block">
                     <a class="btn btn-primary" href="tel:<?= $setting['site_hotline'] ?>"><i class="fas fa-phone-alt"></i>&nbsp; GỌI NGAY</a>
-                  </li>
-                  <li class="header-get-a-quote last d-block d-md-none">
+                  </li> -->
+                  <!-- <li class="header-get-a-quote last d-block d-md-none">
                     <a class="btn btn-primary btn-dark" href="/contact"><i class="fas fa-address-card"></i>&nbsp; LIÊN HỆ</a>
+                  </li> -->
+                  <li class="header-get-a-quote last">
+                    <a class="btn btn-primary" href="tel:<?= $setting['site_hotline'] ?>"><i class="fas fa-phone-alt"></i>&nbsp; GỌI NGAY</a>
                   </li>
                 </ul><!-- Ul end -->
               </div>
