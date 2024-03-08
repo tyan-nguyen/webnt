@@ -99,6 +99,18 @@ $setting = Options::getOptions('SETTING');
         <i class="fa fa-angle-double-up"></i>
       </button>
     </div>
+    
+    <a id="zalo" target="_bank" href="https://zalo.me/0903336470">
+          <img src="/images/icons/zalo.png" width="35px" height="" style="padding-bottom: 2px">
+    </a>
+    
+     <a id="messenger" target="_bank" href="https://www.facebook.com/messages/t/109789528842656">
+          <img src="/images/icons/messenger.png" width="35px" height="" style="padding-bottom: 2px">
+    </a>
+    
+     <a id="call" href="tel:<?= $setting['site_hotline'] ?>">
+          <img src="/images/icons/call.png" width="35px" height="" style="padding-bottom: 2px">
+    </a>
 
   </div><!-- Container end -->
 </div><!-- Copyright end -->

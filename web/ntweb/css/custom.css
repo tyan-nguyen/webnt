@@ -532,3 +532,24 @@ ul.navbar-nav > li > a {
 	color: white;
 }
 
+#zalo {
+    position: fixed;
+    bottom: 70px;
+    right: 40px; 
+}
+#messenger {
+    position: fixed;
+    bottom: 120px;
+    right: 40px; 
+}
+#call {
+    position: fixed;
+    bottom: 170px;
+    right: 40px; 
+}
+
+@media (max-width: 767px){
+#zalo,#messenger,#call {
+    right: 15px; 
+}
+}
