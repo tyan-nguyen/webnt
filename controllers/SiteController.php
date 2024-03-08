@@ -379,7 +379,7 @@ class SiteController extends BaseController
                 return $this->render('contact_success');
             }
         }
-        return $this->redirect('/site/contact');
+        return $this->redirect('/contact');
     }
     
     /**
@@ -418,7 +418,7 @@ class SiteController extends BaseController
                 return $this->render('contact_success');
             }
         }
-        return $this->redirect('/site/contact');
+        return $this->redirect('/contact');
     }
     
     /**
