@@ -1,7 +1,7 @@
 <?php 
     use app\modules\dashboard\models\PostPublic;
 
-    $projectCats = PostPublic::getCategoriesPublic('PROJECT')->all();
+    $projectCats = PostPublic::getCategoriesPublic('PROJECT')->orderBy(['priority'=>SORT_ASC])->all();
     $projects = PostPublic::getPostsPublic('PROJECT')->orderBy(['date_created'=>SORT_DESC])->all();
 ?>
 
