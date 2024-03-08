@@ -39,6 +39,11 @@ return [
         'class'=>'\kartik\grid\DataColumn',
         'attribute'=>'subject',
     ],
+    [
+        'class'=>'\kartik\grid\DataColumn',
+        'attribute'=>'message',
+        'format'=>'html'
+    ],
     /* [
         'class'=>'\kartik\grid\DataColumn',
         'attribute'=>'message',

@@ -390,7 +390,7 @@ class SiteController extends BaseController
         $request = Yii::$app->request;
         if(isset($_POST['phone'])){
             $contact = new Contact();
-            $contact->name = 'Khách hàng';
+            $contact->name = 'Gọi lại cho tôi';
             $contact->email = 'Không có';
             $contact->phone = $_POST['phone'];
             $contact->subject = 'Từ khung Subcribe';
