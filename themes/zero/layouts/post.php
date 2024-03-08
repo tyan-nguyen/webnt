@@ -18,7 +18,7 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_k
 $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/favicon1.ico')]);
 
 
-$this->registerMetaTag(['property'=>'og:image', 'content'=>$this->params['meta_image'] ?? '/images/default.jpg']);
+$this->registerMetaTag(['property'=>'og:image', 'content'=>$this->params['meta_image'] ?? 'https://nguyentrinh.com.vn/images/default.jpg']);
 
 
 $this->registerMetaTag(['name'=>'geo.region', 'content'=>'VN-TV']);
