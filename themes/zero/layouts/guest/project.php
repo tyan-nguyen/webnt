@@ -2,7 +2,7 @@
     use app\modules\dashboard\models\PostPublic;
 
     $projectCats = PostPublic::getCategoriesPublic('PROJECT')->all();
-    $projects = PostPublic::getPostsPublic('PROJECT')->all();
+    $projects = PostPublic::getPostsPublic('PROJECT')->orderBy(['date_created'=>SORT_DESC])->all();
 ?>
 
 <section id="project-area" class="project-area">

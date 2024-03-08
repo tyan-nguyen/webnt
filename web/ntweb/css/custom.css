@@ -75,6 +75,7 @@
     background: var(--bg-button-primary);
 }
 
+
 .call-to-action-box .action-style-box {
     background: var(--bg-color);
     padding: 30px;
@@ -518,4 +519,8 @@ ul.navbar-nav > li > a {
     
 }
 
+.btn-dark{
+	background-color: var(--first-color);
+	color: white;
+}
 
