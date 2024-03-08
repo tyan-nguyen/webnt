@@ -256,7 +256,7 @@ class Posts extends PostsBase
     }
     
     public function getSeoImage(){
-        return $this->seo_image == null ? $this->seo_image : $this->imgCover;
+        return $this->seo_image != null ? $this->seo_image : $this->imgCover;
     }
     
     
