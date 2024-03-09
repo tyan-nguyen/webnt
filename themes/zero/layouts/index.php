@@ -21,8 +21,6 @@ $this->registerMetaTag(['name'=>'geo.region', 'content'=>'VN-TV']);
 $this->registerMetaTag(['name'=>'geo.placename', 'content'=>'Trà Vinh']);
 $this->registerMetaTag(['name'=>'geo.position', 'content'=>'9.9242715, 106.3373696']);
 $this->registerMetaTag(['name'=>'ICBM', 'content'=>'9.9242715, 106.3373696']);
-//google analytics
-echo $this->render('guest/googleAnalytic');
 
 ?>
 <?php $this->beginPage() ?>
@@ -31,7 +29,10 @@ echo $this->render('guest/googleAnalytic');
 <head>
     <title><?= $this->title ?></title>
     <?php $this->head() ?>
-
+    <?php 
+	//google analytics
+    echo $this->render('guest/googleAnalytic');
+    ?>
 </head>
 <body>
 <?php $this->beginBody() ?>
