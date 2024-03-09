@@ -22,7 +22,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <?php $this->head() ?>
     <?php 
     //google analytics
-    $this->render('guest/googleAnalytic');
+    echo $this->render('guest/googleAnalytic');
     ?>
 </head>
 <body>

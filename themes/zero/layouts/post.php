@@ -26,7 +26,7 @@ $this->registerMetaTag(['name'=>'geo.placename', 'content'=>'Trà Vinh']);
 $this->registerMetaTag(['name'=>'geo.position', 'content'=>'9.9242715, 106.3373696']);
 $this->registerMetaTag(['name'=>'ICBM', 'content'=>'9.9242715, 106.3373696']);
 //google analytics
-$this->render('guest/googleAnalytic');
+echo $this->render('guest/googleAnalytic');
 
 $listNewPosts = PostPublic::getPostsPublic('POST')->limit(4)->orderBy(['date_created'=>SORT_DESC])->all();
 $listCategories = PostPublic::getCategoriesPublic('POST')->all();
