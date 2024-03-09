@@ -20,6 +20,10 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <head>
     <title><?= $this->title ?></title>
     <?php $this->head() ?>
+    <?php 
+    //google analytics
+    $this->render('guest/googleAnalytic');
+    ?>
 </head>
 <body>
 <?php $this->beginBody() ?>
