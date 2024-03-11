@@ -4,7 +4,7 @@ use app\modules\dashboard\models\Posts;
 $posts = Posts::getPostByType('POST',5, 'video');
 ?>
 
-<section class="content content-dark">
+<section id="partner" class="content content-dark">
   <div class="container">
     <div class="row">
         <div class="col-lg-5">

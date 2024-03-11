@@ -390,6 +390,12 @@ ul.top-info li p.info-text{
     background-repeat: no-repeat;
     background-size: cover;
 }
+#partner{
+    background-color: #efefef;
+    background-image: url(../images/bg-partner.png?v=6);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .page-item.active .page-link {
     background-color: var(--second-color);
     border-color: var(--second-color);
