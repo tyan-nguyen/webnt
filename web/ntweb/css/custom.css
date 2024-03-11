@@ -1,3 +1,10 @@
+/*--body-font: "Inter", sans-serif;
+    --heading-font: "Literata", sans-serif;*/
+body, p {
+    font-family: "Inter", sans-serif;
+    line-height: 26px;
+    font-size: 16px;
+}
 .content-dark{
 	background-color: var(--four-color);
 }
@@ -165,7 +172,8 @@ ul.top-info-box li .info-box .info-box-subtitle {
 h1, h2, h3, h4, h5, h6 {
     color: var(--first-color);
     font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
+   /* font-family: 'Montserrat', sans-serif;*/
+   font-family: "Inter", sans-serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased !important;
 }
@@ -298,7 +306,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .big-title{
-	font-size: 16px;
+	font-size: 17px;
 	font-weight: bold;
 }
 .copyright {
@@ -309,7 +317,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     z-index: 1;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 16px;
 }
 .copyright ul li a {
     font-weight: 500;
