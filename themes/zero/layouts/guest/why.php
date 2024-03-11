@@ -1,5 +1,5 @@
 <section id="ts-features" class="ts-features pb-2">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row text-center">
       <div class="col-lg-12">
         <h2 class="section-title">Giá trị cốt lõi</h2>

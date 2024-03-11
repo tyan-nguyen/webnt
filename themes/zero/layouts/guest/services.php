@@ -3,7 +3,7 @@ $posts = \app\modules\dashboard\models\PostPublic::getPostsPublic('SERVICE')->or
 ?>
 
 <section id="ts-service-area" class="ts-service-area pb-0">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row text-center">
         <div class="col-12">
           <h2 class="section-title">Sản phẩm, dịch vụ của chúng tôi</h2>

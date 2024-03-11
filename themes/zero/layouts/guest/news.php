@@ -1,10 +1,10 @@
 <?php 
 use app\modules\dashboard\models\Posts;
 
-$posts = Posts::getPostByType('POST',3,'hoat-dong-doanh-nghiep');
+$posts = Posts::getPostByType('POST',4,'hoat-dong-doanh-nghiep');
 ?>
 <section id="news" class="news">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row text-center">
         <div class="col-12">
           <h2 class="section-title">Bài viết</h2>
@@ -16,7 +16,7 @@ $posts = Posts::getPostByType('POST',3,'hoat-dong-doanh-nghiep');
     <div class="row">
     
     	<?php foreach ($posts as $iPost=>$post){ ?>
-    	<div class="col-lg-4 col-md-6 mb-4">
+    	<div class="col-lg-3 col-md-6 mb-4">
           <div class="latest-post">
               <div class="latest-post-media">
                 <a href="<?= $post->url ?>" class="latest-post-img">

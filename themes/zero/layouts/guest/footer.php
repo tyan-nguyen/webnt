@@ -10,7 +10,7 @@ $setting = Options::getOptions('SETTING');
 ?>
 <footer id="footer" class="footer bg-overlay">
 <div class="footer-main">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row justify-content-between">
       <div class="col-lg-4 col-md-6 footer-widget footer-about">
         <h3 class="widget-title">Thông tin</h3>

@@ -6,7 +6,7 @@
 ?>
 
 <section id="project-area" class="project-area">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row text-center">
       <div class="col-lg-12">
         <h2 class="section-title">Nhà xưởng, Công trình, Dự án</h2>
@@ -61,7 +61,7 @@
           <?php foreach ($projects as $iProject=>$project){ 
               $group = '[&quot;' . str_replace(';', '&quot;,&quot;', $project->categories) . '&quot;]';
               ?>
-          <div class="col-lg-4 col-md-6 shuffle-item shuffle-item--visible" data-groups="<?= $group ?>" style="position: absolute; top: 0px; left: 0px; visibility: visible; will-change: transform; opacity: 1; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity; transform: translate(0px, 0px) scale(1);padding:5px">
+          <div class="col-lg-3 col-md-6 shuffle-item shuffle-item--visible" data-groups="<?= $group ?>" style="position: absolute; top: 0px; left: 0px; visibility: visible; will-change: transform; opacity: 1; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity; transform: translate(0px, 0px) scale(1);padding:5px">
             <div class="project-img-container">
               <a class="gallery-popup cboxElement" href="<?= $project->imgCover ?>" aria-label="project-img">
                 <img class="img-fluid" src="<?= $project->imgCover ?>" alt="project-img">

@@ -5,7 +5,7 @@ $posts = Posts::getPostByType('POST',5, 'video');
 ?>
 
 <section id="partner" class="content content-dark">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
         <div class="col-lg-5">
           <h3 class="column-title"><a href="/posts/video">VIDEO</a></h3>
