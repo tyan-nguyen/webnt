@@ -12,6 +12,10 @@ body, p {
 .content-posts{
 	
 }
+
+.latest-post .post-title{
+	font-size: 17px;
+}
 .partner-wrap{
 	padding-left: 100px;	
 }
