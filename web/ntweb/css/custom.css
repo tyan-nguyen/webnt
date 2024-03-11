@@ -29,7 +29,7 @@ body, p {
 }
 
 .subscribe {
-    background: var(--third-color);
+    background: var(--first-color);
     padding: 0;
 }
 
@@ -40,6 +40,7 @@ body, p {
 .subscribe h4{
     color: var(--second-color)!important;
     padding: 0;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 .post-content img{
 	max-width: 100% !important;
