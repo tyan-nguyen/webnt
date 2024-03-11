@@ -55,7 +55,7 @@
         </div><!-- project filter end -->
 
 
-        <div class="row shuffle-wrapper shuffle" style="position: relative; overflow: hidden; height: 608px; transition: height 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;max-height:608px;">
+        <div class="row shuffle-wrapper shuffle" style="position: relative; overflow: hidden; height: 700px; transition: height 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;max-height:700px;">
           <div class="col-1 shuffle-sizer"></div>
           
           <?php foreach ($projects as $iProject=>$project){ 
