@@ -32,7 +32,7 @@ class IndexAssets extends AssetBundle
         //Template styles
         'ntweb/css/theme.css?v=1',
         'ntweb/css/style.css',
-        'ntweb/css/custom.css?v=26',
+        'ntweb/css/custom.css?v=27',
         'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Montserrat:wght@500&family=Roboto+Serif:opsz@8..144&family=Inter:wght@500&family=Literata:opsz,wght@7..72,500&display=swap'
     ];
     public $js = [
