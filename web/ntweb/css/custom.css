@@ -375,7 +375,7 @@ ul.top-info li {
 
 .top-social ul li a {
     color:var(--first-color);
-    font-size: 17px;
+    font-size: 16px;
 }
 .top-social ul li a:hover {
     color:var(--second-color);
