@@ -3,7 +3,7 @@
 body, p {
     font-family: "Inter", sans-serif;
     line-height: 26px;
-    font-size: 16px;
+    font-size: 17px;
 }
 .content-dark{
 	background-color: var(--four-color);
@@ -14,7 +14,7 @@ body, p {
 }
 
 .latest-post .post-title{
-	font-size: 17px;
+	font-size: 18px;
 }
 .partner-wrap{
 	padding-left: 100px;	
@@ -245,7 +245,7 @@ h1, h2, h3, h4, h5, h6 {
 }*/
 
 .ts-facts .ts-facts-content .ts-facts-title {
-    font-size: 16px;
+    font-size: 17px;
     color: white;
     margin: 0;
 }
@@ -311,7 +311,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .big-title{
-	font-size: 17px;
+	font-size: 18px;
 	font-weight: bold;
 }
 .copyright {
