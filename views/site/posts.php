@@ -13,7 +13,11 @@ if(isset($route) && $route != null){
 	 <div class="post"> 
 	    <div class="row">
 	    	<div class="col-md-4">
-	    		 <div class="post-meta"></div>
+	    		<div class="post-body">
+                    <div class="entry-header">        
+                        <div class="post-meta"></div>
+	    		 	</div>
+	    		 </div>
                         
 	    		<a href="<?= $post->url ?>" class="latest-post-img">
                     <img loading="lazy" class="img-fluid" src="<?= $post->imgCover ?>" alt="img">
