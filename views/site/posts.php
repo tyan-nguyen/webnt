@@ -10,27 +10,38 @@ if(isset($route) && $route != null){
 	<?php 
 	foreach ($listPosts as $iPost=>$post){
 	?>
-	 <div class="post">        
-        <div class="post-body">
-            <div class="entry-header">
-                <div class="post-meta">
-                   
-                    <span class="post-cat">
-                        <i class="far fa-folder-open"></i>
-                        <?= $post->getCategoriesView() ?>
-                    </span>
-                    <span class="post-meta-date"><i class="far fa-calendar"></i> <?= $post->dateCreated ?></span>
+	 <div class="post"> 
+	    <div class="row">
+	    	<div class="col-md-4">
+	    		<a href="<?= $post->url ?>" class="latest-post-img">
+                    <img loading="lazy" class="img-fluid" src="<?= $post->imgCover ?>" alt="img">
+                </a>
+	    	</div>
+	    	<div class="col-md-8">    
+                <div class="post-body">
+                    <div class="entry-header">
+        
+                        <div class="post-meta">
+                           
+                            <span class="post-cat">
+                                <i class="far fa-folder-open"></i>
+                                <?= $post->getCategoriesView() ?>
+                            </span>
+                            <span class="post-meta-date"><i class="far fa-calendar"></i> <?= $post->dateCreated ?></span>
+                            
+                        </div>
+                        <h2 class="entry-title">
+                            <a href="<?= $post->url ?>"><?= $post->title ?></a>
+                        </h2>
+        
+                    </div><!-- header end -->
+                    <div class="entry-content">
+                        <p><?= $post->getSummaryByChars() ?></p>
+                    </div>
                     
-                </div>
-                <h2 class="entry-title">
-                    <a href="<?= $post->url ?>"><?= $post->title ?></a>
-                </h2>
-            </div><!-- header end -->
-            <div class="entry-content">
-                <p><?= $post->getSummaryByChars() ?></p>
+            	</div><!-- post-body end -->
             </div>
-            
-        </div><!-- post-body end -->
+        </div>
     </div><!-- post end -->
 	<?php } ?>
 
