@@ -283,6 +283,9 @@ h1, h2, h3, h4, h5, h6 {
     transition: 400ms;
     padding: 10px 13px;
 }
+.footer-social ul li img {
+    width: 20px;
+}
 
 .bg-overlay:after {
     background-color: var(--first-color);
@@ -379,6 +382,9 @@ ul.top-info li {
 }
 .top-social ul li a:hover {
     color:var(--second-color);
+}
+.top-social ul li img {
+    width: 17px;
 }
 
 ul.top-info li p.info-text{
