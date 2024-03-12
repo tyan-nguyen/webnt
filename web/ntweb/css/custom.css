@@ -375,11 +375,14 @@ ul.top-info li {
 
 .top-social ul li a {
     color:var(--first-color);
+    font-size: 17px;
 }
 .top-social ul li a:hover {
     color:var(--second-color);
 }
-
+.footer-social ul li a{
+	font-size: 18px;
+}
 ul.top-info li p.info-text{
     font-size: 12px;
 }
