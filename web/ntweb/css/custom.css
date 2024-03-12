@@ -406,6 +406,12 @@ ul.top-info li p.info-text{
     font-size: 13px;
 }
 
+
+#back-to-top .btn.btn-primary {
+    background: red;
+    color: white;
+}
+
 #facts{
     background-color: #efefef;
     background-image: url(../images/bg_fact.png?v=6);
