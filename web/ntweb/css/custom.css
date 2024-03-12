@@ -285,6 +285,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer-social ul li img {
     width: 20px;
+    padding-bottom: 2px;
 }
 
 .bg-overlay:after {
@@ -385,6 +386,7 @@ ul.top-info li {
 }
 .top-social ul li img {
     width: 17px;
+    padding-bottom: 2px;
 }
 
 ul.top-info li p.info-text{
